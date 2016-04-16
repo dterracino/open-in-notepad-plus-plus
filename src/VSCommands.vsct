@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <Extern href="stdidcmd.h"/>
+    <Extern href="vsshlids.h"/>
+
+    <Commands package="guidPackage">
+        <Buttons>
+            <Button guid="guidOpenInVsCmdSet" id="OpenInNotepadPlusPlus" priority="0x0500" type="Button">
+                <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_FOLDER_EXPLORE" />
+                <Icon guid="guidIcons" id="NotepadPlusPlus" />
+                <Strings>
+                    <ButtonText>Open in Notepad++</ButtonText>
+                </Strings>
+            </Button>
+        </Buttons>
+
+        <Bitmaps>
+            <Bitmap guid="guidIcons" usedList="NotepadPlusPlus" href="Resources/logo.png" />
+        </Bitmaps>
+    </Commands>
+
+    <CommandPlacements>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInNotepadPlusPlus" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_SOLUTION_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInNotepadPlusPlus" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_PROJECT_EXPLORE"/>
+        </CommandPlacement>
+        <CommandPlacement guid="guidOpenInVsCmdSet" id="OpenInNotepadPlusPlus" priority="0x0500">
+            <Parent guid="guidSHLMainMenu" id="IDG_VS_CTXT_ITEM_OPEN"/>
+        </CommandPlacement>
+    </CommandPlacements>
+
+    <Symbols>
+        <!-- This is the package guid. -->
+        <GuidSymbol name="guidPackage" value="{A8D3F4B6-CD76-47AB-A0DC-4E42869CEA9B}" />
+
+        <GuidSymbol name="guidOpenInVsCmdSet" value="{F5E04065-CE59-4638-A312-E6EB6CC73DBC}">
+            <IDSymbol name="OpenInNotepadPlusPlus" value="0x0100" />
+        </GuidSymbol>
+
+        <GuidSymbol name="guidIcons" value="{F5E04065-CE59-4638-A312-E6EB6CC73DBC}">
+            <IDSymbol name="NotepadPlusPlus" value="1" />
+        </GuidSymbol>
+    </Symbols>
+</CommandTable>
